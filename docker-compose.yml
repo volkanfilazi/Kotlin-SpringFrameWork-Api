@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  demokit:
+    container_name: "demoKot"
+    ports:
+    - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: postgres
+      POSTGRES_DB: restful-api

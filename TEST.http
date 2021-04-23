@@ -1,0 +1,87 @@
+### Create com.example.demoKot.entity.Product - Success
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id" : "A001",
+  "name" : "Mac Book Pro 15",
+  "price" : 1000,
+  "quantity" : 10
+
+}
+
+### Create com.example.demoKot.entity.Product - Error
+
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id" : "",
+  "name" : "",
+  "price" : 0,
+  "quantity" : -10
+
+}
+
+### Get com.example.demoKot.entity.Product - Success
+
+GET http://localhost:8080/api/products/A001
+Accept: application/json
+
+### Get com.example.demoKot.entity.Product Not Found - Error
+
+GET http://localhost:8080/api/products/VOL
+Accept: application/json
+
+### Update com.example.demoKot.entity.Product - Success
+
+PUT http://localhost:8080/api/products/A001
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name" : "NVIDIA 7200",
+  "price" : 3000,
+  "quantity" : 5
+
+}
+
+### Update com.example.demoKot.entity.Product - Error
+
+PUT http://localhost:8080/api/products/5
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name" : "NVIDIA 7200",
+  "price" : 3000,
+  "quantity" : 5
+
+}
+
+### Delete com.example.demoKot.entity.Product - Success
+
+DELETE http://localhost:8080/api/products/A001
+Accept: application/json
+
+### Delete com.example.demoKot.entity.Product - Error
+
+DELETE http://localhost:8080/api/products/6
+Accept: application/json
+
+### Get All Products - Success
+
+GET http://localhost:8080/api/products
+Accept: application/json
+
+### Get All Products - Size
+
+GET http://localhost:8080/api/products?size=3
+Accept: application/json
+
+### Get All Products - Page
+
+GET http://localhost:8080/api/products?size=3&page=1
+Accept: application/json
